@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <center><title>To Do App</title></center>
+</head>
+<body><center>
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+    </div>
+    <div class="col" style="padding: 20px; ">
+        <br>
+        <legend><b>Create A ToDo Task</b></legend>
+        <form class="form-floating" method="post" action="/add">
+            <br>
+            <div class="form-floating">
+                <label for="floatingInputValue1">Task Date</label>
+                <input type="date" name="date" class="form-control" id="floatingInputValue1" required>
+
+            </div>
+            <br>
+            <div class="form-floating">
+                <label for="floatingInputValue2">Task Name</label>
+                <input type="text" name="name" class="form-control" id="floatingInputValue2" required>
+
+            </div>
+            <br>
+            <div class="form-floating">
+                <label for="floatingInputValue3">Email Id</label>
+                <input type="email" name="email" class="form-control" id="floatingInputValue3" required>
+
+            </div>
+            <br>
+            <div class="form-floating">
+                <label for="floatingInputValue4">Phone Number</label>
+                <input type="number" name="phone" class="form-control" id="floatingInputValue4"  required>
+
+            </div>
+            <br>
+            <div class="form-floating">
+                <label for="floatingSelect">Select Priority Level</label>
+                <select class="form-select" name="pri" id="floatingSelect" aria-label="Floating label select example" required>
+                    <option selected>Select Priority Level</option>
+                    <option value="High">High</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Low">Low</option>
+                </select>
+
+            </div>
+            <br>
+            <div class="form-floating">
+                <button type="submit" class="btn btn-primary">Add Task</button>
+            </div>
+        </form>
+        <br>
+        {% if msg %}
+        <div class="alert alert-success" role="alert">
+            {{ msg }}
+        </div>
+        {% endif %}
+        <br>
+        <div class="form-floating">
+            <a href="/list"><button type="submit" class="btn btn-primary">Show To-Do List</button></a>
+        </div>
+    </div>
+    <div class="col-3">
+    </div>
+  </div>
+</div></center>
+</body>
+</html>

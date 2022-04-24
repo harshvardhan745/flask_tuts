@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <a href="/">
+    <- Go back</a>
+
+      <h2>Simple CRUD operations</h2>
+      <form method="POST" action="/create">
+
+        <p>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name">
+        </p>
+
+
+        <p>
+          <label for="gender">Gender</label>
+          <input type="radio" name="gender" id="gender" value="M">&nbsp;&nbsp;Male&nbsp;
+          <input type="radio" name="gender" id="gender" value="F">&nbsp;&nbsp;Female
+        </p>
+
+
+        <p>
+          <label for="age">Roll No</label>
+          <input type="number" name="age" id="age">
+        </p>
+
+
+        <p>
+          <label for="address">Address</label>
+          <input type="text" name="address" id="address">
+        </p>
+
+        <p>
+          <button type="submit">Create</button>
+        </p>
+
+      </form>
+
+      {% if msg %}
+      {{ msg }}
+      {% endif %}
+
+</body>
+
+</html>

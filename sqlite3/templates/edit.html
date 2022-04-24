@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <a href="/">
+    <- Go back</a>
+
+      <form method="POST" action="/edit/{{row['id']}}">
+
+        <p>
+          <label for="name">Name</label>
+          <input type="text" name="student_name" id="student_name" value="{{row['student_name']}}">
+        </p>
+
+
+        <p>
+          <label for="class_name">Class</label>
+          <input type="text" name="class_name" id="class_name" value="{{row['class_name']}}">
+        </p>
+
+
+        <p>
+          <label for="roll_no">Roll No</label>
+          <input type="text" name="roll_no" id="roll_no" value="{{row['roll_no']}}">
+        </p>
+
+        <p>
+          <button type="submit">Update</button>
+        </p>
+
+      </form>
+
+      {% if msg %}
+      {{ msg }}
+      {% endif %}
+
+</body>
+
+</html>

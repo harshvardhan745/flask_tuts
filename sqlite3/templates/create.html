@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <a href="/">
+    <- Go back</a>
+
+      <h2>Simple CRUD operations</h2>
+      <form method="POST" action="/create">
+
+        <p>
+          <label for="name">Name</label>
+          <input type="text" name="student_name" id="student_name">
+        </p>
+
+
+        <p>
+          <label for="class_name">Class</label>
+          <input type="text" name="class_name" id="class_name">
+        </p>
+
+
+        <p>
+          <label for="roll_no">Roll No</label>
+          <input type="text" name="roll_no" id="roll_no">
+        </p>
+
+        <p>
+          <button type="submit">Create</button>
+        </p>
+
+      </form>
+
+      {% if msg %}
+      {{ msg }}
+      {% endif %}
+
+</body>
+
+</html>

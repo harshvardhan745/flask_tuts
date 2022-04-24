@@ -1,0 +1,25 @@
+table,
+td,
+th {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+table {
+  width: 100%;
+}
+
+td:nth-child(1) {
+  width: 50%;
+}
+
+td:nth-child(2) {
+  width: 25%;
+  text-align: center;
+}
+
+td:nth-child(3) {
+  width: 25%;
+  text-align: center;
+}

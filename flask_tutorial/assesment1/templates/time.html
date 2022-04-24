@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>{{ error }}</h3>
+    <form method="POST">
+    <div>
+      <label for="timez">Time Zone </label>
+      <input type="text" name="timez" id="timez">
+    </div>
+    <button type="submit">See Time</button>
+    </form>
+    <br><br><br>
+    <h1>Current Time For {{ timez }} </font> is</h1>
+     <h1 style="color: GREEN;">{{ DateTime }}</h1>
+</body>
+</html>

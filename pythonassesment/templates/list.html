@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <center><title>ToDo App - List</title></center>
+</head>
+<body><center>
+<div class="container">
+  <div class="row">
+    <div class="col-1">
+    </div>
+    <div class="col" style="padding: 20px; ">
+        <br>
+        <legend><b>To-Do-List</b></legend>
+        <table class="table">
+          <thead class="table-dark">
+            <tr>
+              <th>Date</th>
+              <th>Task</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Priority</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for todo in todos %}
+            <tr>
+                <td>{{ todo.date }}</td>
+                <td>{{ todo.name }}</td>
+                <td>{{ todo.email }}</td>
+                <td>{{ todo.phone }}</td>
+                <td>{{ todo.priority }}</td>
+                <td>
+                  <a href="/edit/{{todo.id}}">
+                    <button type="button" class="btn btn-success">Edit</button>
+                  </a>
+                </td>
+                <td>
+                  <a href="/delete/{{todo.id}}">
+                    <button type="button" class="btn btn-success">Delete
+                    </button>
+                  </a>
+                </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <br>
+        {% if msg %}
+        <div class="alert alert-success" role="alert">
+            {{ msg }}
+        </div>
+        {% endif %}
+  <div class="form-floating">
+      <a href="/"><button type="submit" class="btn btn-primary">Add Task To List</button></a>
+  </div>
+    </div>
+      <div class="col-1">
+      </div>
+  </div>
+</div></center>
+</body>
+</html>
